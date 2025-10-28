@@ -1,524 +1,529 @@
 const sampleListings = [
   {
-    title: "Cozy Beachfront Cottage",
+    title: "Sardar Patel Stadium",
     description:
-      "Escape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
+      "Book a premium international-level ground in Ahmedabad with lush green grass and modern facilities. Ideal for tournaments and corporate matches.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1605851079837-4f3b64fefc5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
-    price: 1500,
-    location: "Malibu",
-    country: "United States",
-    reviews: [
-    ],
+    price: 4500,
+    location: "Ahmedabad",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [72.585, 23.033],
     },
   },
   {
-    title: "Modern Loft in Downtown",
+    title: "Wankhede Cricket Ground",
     description:
-      "Stay in the heart of the city in this stylish loft apartment. Perfect for urban explorers!",
+      "A scenic seaside stadium in Mumbai — perfect for professional-level matches and events. Night match lighting available.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1200,
-    location: "New York City",
-    country: "United States",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Mountain Retreat",
-    description:
-      "Unplug and unwind in this peaceful mountain cabin. Surrounded by nature, it's a perfect place to recharge.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1000,
-    location: "Aspen",
-    country: "United States",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Historic Villa in Tuscany",
-    description:
-      "Experience the charm of Tuscany in this beautifully restored villa. Explore the rolling hills and vineyards.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 2500,
-    location: "Florence",
-    country: "Italy",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Secluded Treehouse Getaway",
-    description:
-      "Live among the treetops in this unique treehouse retreat. A true nature lover's paradise.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 800,
-    location: "Portland",
-    country: "United States",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Beachfront Paradise",
-    description:
-      "Step out of your door onto the sandy beach. This beachfront condo offers the ultimate relaxation.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 2000,
-    location: "Cancun",
-    country: "Mexico",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Rustic Cabin by the Lake",
-    description:
-      "Spend your days fishing and kayaking on the serene lake. This cozy cabin is perfect for outdoor enthusiasts.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 900,
-    location: "Lake Tahoe",
-    country: "United States",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Luxury Penthouse with City Views",
-    description:
-      "Indulge in luxury living with panoramic city views from this stunning penthouse apartment.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1622396481328-9b1b78cdd9fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 3500,
-    location: "Los Angeles",
-    country: "United States",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Ski-In/Ski-Out Chalet",
-    description:
-      "Hit the slopes right from your doorstep in this ski-in/ski-out chalet in the Swiss Alps.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 3000,
-    location: "Verbier",
-    country: "Switzerland",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Safari Lodge in the Serengeti",
-    description:
-      "Experience the thrill of the wild in a comfortable safari lodge. Witness the Great Migration up close.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1598373182308-1b37c1f2df15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
     price: 4000,
-    location: "Serengeti National Park",
-    country: "Tanzania",
-    reviews: [
-    ],
+    location: "Mumbai",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [72.8777, 19.076],
     },
   },
   {
-    title: "Historic Canal House",
+    title: "Eden Gardens",
     description:
-      "Stay in a piece of history in this beautifully preserved canal house in Amsterdam's iconic district.",
+      "Play where legends have played. A large, well-maintained turf ground with seating for spectators and top-quality pitch.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1540747913346-19e32dc3e67a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4800,
+    location: "Kolkata",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [88.3639, 22.5726],
+    },
+  },
+  {
+    title: "Chinnaswamy Stadium",
+    description:
+      "Located in the heart of Bangalore, this ground offers excellent facilities for league and practice matches.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1587049352841-7e13d94e043b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4200,
+    location: "Bangalore",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [77.5946, 12.9716],
+    },
+  },
+  {
+    title: "Motibaug Cricket Ground",
+    description:
+      "A serene and open ground in Vadodara suitable for weekend matches, college tournaments, and practice sessions.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
     price: 1800,
-    location: "Amsterdam",
-    country: "Netherlands",
-    reviews: [
-    ],
+    location: "Vadodara",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [73.1812, 22.3072],
     },
   },
   {
-    title: "Private Island Retreat",
+    title: "DY Patil Sports Academy",
     description:
-      "Have an entire island to yourself for a truly exclusive and unforgettable vacation experience.",
+      "A world-class stadium with top-notch turf and lighting. Great for night matches and cricket events.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1618140052121-39fc6db33972?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9kZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 10000,
-    location: "Fiji",
-    country: "Fiji",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Charming Cottage in the Cotswolds",
-    description:
-      "Escape to the picturesque Cotswolds in this quaint and charming cottage with a thatched roof.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602088113235-229c19758e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmVhY2glMjB2YWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1200,
-    location: "Cotswolds",
-    country: "United Kingdom",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Historic Brownstone in Boston",
-    description:
-      "Step back in time in this elegant historic brownstone located in the heart of Boston.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1533619239233-6280475a633a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 2200,
-    location: "Boston",
-    country: "United States",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Beachfront Bungalow in Bali",
-    description:
-      "Relax on the sandy shores of Bali in this beautiful beachfront bungalow with a private pool.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602391833977-358a52198938?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1800,
-    location: "Bali",
-    country: "Indonesia",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Mountain View Cabin in Banff",
-    description:
-      "Enjoy breathtaking mountain views from this cozy cabin in the Canadian Rockies.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1500,
-    location: "Banff",
-    country: "Canada",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Art Deco Apartment in Miami",
-    description:
-      "Step into the glamour of the 1920s in this stylish Art Deco apartment in South Beach.",
-    image: {
-      filename: "listingimage",
-      url: "https://plus.unsplash.com/premium_photo-1670963964797-942df1804579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1600,
-    location: "Miami",
-    country: "United States",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Tropical Villa in Phuket",
-    description:
-      "Escape to a tropical paradise in this luxurious villa with a private infinity pool in Phuket.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1470165301023-58dab8118cc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 3000,
-    location: "Phuket",
-    country: "Thailand",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Historic Castle in Scotland",
-    description:
-      "Live like royalty in this historic castle in the Scottish Highlands. Explore the rugged beauty of the area.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1585543805890-6051f7829f98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJlYWNoJTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 4000,
-    location: "Scottish Highlands",
-    country: "United Kingdom",
-    reviews: [
-    ],
-    geometry: {
-      type: "Point",
-      coordinates: [-118.68517, 34.034378],
-    },
-  },
-  {
-    title: "Desert Oasis in Dubai",
-    description:
-      "Experience luxury in the middle of the desert in this opulent oasis in Dubai with a private pool.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
     price: 5000,
-    location: "Dubai",
-    country: "United Arab Emirates",
-    reviews: [
-    ],
+    location: "Navi Mumbai",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [73.0197, 19.033],
     },
   },
   {
-    title: "Rustic Log Cabin in Montana",
+    title: "Gujarat University Ground",
     description:
-      "Unplug and unwind in this cozy log cabin surrounded by the natural beauty of Montana.",
+      "An ideal budget-friendly ground for college and amateur matches, located centrally in Ahmedabad.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1586375300773-8384e3e4916f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
-    price: 1100,
-    location: "Montana",
-    country: "United States",
-    reviews: [
-    ],
+    price: 1000,
+    location: "Ahmedabad",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [72.5714, 23.0225],
     },
   },
   {
-    title: "Beachfront Villa in Greece",
+    title: "Sawai Mansingh Stadium",
     description:
-      "Enjoy the crystal-clear waters of the Mediterranean in this beautiful beachfront villa on a Greek island.",
+      "A picturesque stadium in Jaipur with premium amenities. Available for tournaments and practice sessions.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1524224745116-5ffb01e1f0a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
-    price: 2500,
-    location: "Mykonos",
-    country: "Greece",
-    reviews: [
-    ],
+    price: 3700,
+    location: "Jaipur",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [75.7873, 26.9124],
     },
   },
   {
-    title: "Eco-Friendly Treehouse Retreat",
+    title: "Chepauk Ground",
     description:
-      "Stay in an eco-friendly treehouse nestled in the forest. It's the perfect escape for nature lovers.",
+      "A historic cricket venue in Chennai offering a great pitch for both batting and bowling practice.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1488462237308-ecaa28b729d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1623282033815-26e3c2ac169b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
-    price: 750,
-    location: "Costa Rica",
-    country: "Costa Rica",
-    reviews: [
-    ],
+    price: 3900,
+    location: "Chennai",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [80.2707, 13.0827],
     },
   },
   {
-    title: "Historic Cottage in Charleston",
+    title: "Local Turf Arena",
     description:
-      "Experience the charm of historic Charleston in this beautifully restored cottage with a private garden.",
+      "Perfect for quick turf matches with friends. Fully enclosed synthetic turf and night lighting available.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
-    price: 1600,
-    location: "Charleston",
-    country: "United States",
-    reviews: [
-    ],
+    price: 800,
+    location: "Surat",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [72.8311, 21.1702],
+    },
+  },
+    {
+    title: "Rajiv Gandhi International Stadium",
+    description:
+      "An iconic ground in Hyderabad with modern seating, lush outfield, and great practice facilities for professionals.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1595526114035-0d45ed16f8e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4600,
+    location: "Hyderabad",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [78.4867, 17.385],
     },
   },
   {
-    title: "Modern Apartment in Tokyo",
+    title: "Holkar Cricket Stadium",
     description:
-      "Explore the vibrant city of Tokyo from this modern and centrally located apartment.",
+      "Compact yet world-class ground in Indore, known for its batting-friendly pitch and lush surroundings.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRva3lvfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1520975869019-62a3b4b86c70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3500,
+    location: "Indore",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [75.8577, 22.7196],
+    },
+  },
+  {
+    title: "Green Park Stadium",
+    description:
+      "A scenic ground in Kanpur offering well-maintained turf and practice nets for day-long sessions.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1591133388742-9e63bb3e86a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3200,
+    location: "Kanpur",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [80.3319, 26.4499],
+    },
+  },
+  {
+    title: "Barabati Stadium",
+    description:
+      "Historic stadium in Cuttack perfect for local tournaments and inter-district matches.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1625840474593-d24d8baf5638?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3000,
+    location: "Cuttack",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [85.8793, 20.4625],
+    },
+  },
+  {
+    title: "HPCA Stadium",
+    description:
+      "Enjoy breathtaking Himalayan views while playing in Dharamshala’s world-famous stadium.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1522780550582-74b07c7f1af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4200,
+    location: "Dharamshala",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [76.3213, 32.219],
+    },
+  },
+  {
+    title: "M. A. Chidambaram Indoor Arena",
+    description:
+      "A smaller practice turf near Chennai city, equipped with indoor training nets and floodlights.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1601581886209-56b17a6abf1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
     price: 2000,
-    location: "Tokyo",
-    country: "Japan",
-    reviews: [
-    ],
+    location: "Chennai",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [80.2707, 13.0827],
     },
   },
   {
-    title: "Lakefront Cabin in New Hampshire",
+    title: "Brabourne Stadium",
     description:
-      "Spend your days by the lake in this cozy cabin in the scenic White Mountains of New Hampshire.",
+      "One of Mumbai’s oldest grounds — well-maintained with seating for small tournaments and events.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1607748851925-4ec0e30b5a19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3600,
+    location: "Mumbai",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [72.8777, 19.076],
+    },
+  },
+  {
+    title: "Jawaharlal Nehru Stadium",
+    description:
+      "Multi-purpose stadium in Delhi suitable for football, athletics, and cricket practice sessions.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1596558450268-3d6d8b08c67f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4400,
+    location: "New Delhi",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [77.209, 28.6139],
+    },
+  },
+  {
+    title: "Fatorda Stadium",
+    description:
+      "Located in Goa, this scenic stadium is ideal for both football and cricket events with great ambiance.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1599058917212-fb8aef49a1d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3700,
+    location: "Margao",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [73.9455, 15.2832],
+    },
+  },
+  {
+    title: "Salt Lake Stadium",
+    description:
+      "A world-class football venue in Kolkata — available for tournaments and practice matches.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4100,
+    location: "Kolkata",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [88.3639, 22.5726],
+    },
+  },
+  {
+    title: "JRD Tata Sports Complex",
+    description:
+      "A premier sports complex in Jamshedpur with excellent turf and athletic tracks for events.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1626727077336-d2a60a8f0f63?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3500,
+    location: "Jamshedpur",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [86.2029, 22.8046],
+    },
+  },
+  {
+    title: "Sector 42 Stadium",
+    description:
+      "Modern ground in Chandigarh featuring lush green turf and spectator stands. Ideal for league matches.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3300,
+    location: "Chandigarh",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [76.7794, 30.7333],
+    },
+  },
+  {
+    title: "Dehradun Cricket Ground",
+    description:
+      "Nestled amidst hills, this ground offers peaceful surroundings for training and friendly matches.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1625244721380-6f8efbf0de1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2900,
+    location: "Dehradun",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [78.0322, 30.3165],
+    },
+  },
+  {
+    title: "Lal Bahadur Shastri Stadium",
+    description:
+      "A multipurpose stadium in Hyderabad, suitable for cricket and athletic training.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1578302758060-dbfed072c69f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3100,
+    location: "Hyderabad",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [78.4867, 17.385],
+    },
+  },
+  {
+    title: "Pune Sports Club Ground",
+    description:
+      "High-quality ground in Pune ideal for professional coaching and weekend leagues.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1611841520561-1ab70b80774e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3400,
+    location: "Pune",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [73.8567, 18.5204],
+    },
+  },
+  {
+    title: "Rajkot Cricket Ground",
+    description:
+      "Modern cricket venue in Rajkot with lush grass and a lively atmosphere, great for local leagues.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3100,
+    location: "Rajkot",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [70.8022, 22.3039],
+    },
+  },
+  {
+    title: "Lucknow Sports Ground",
+    description:
+      "A newly renovated ground perfect for training, coaching sessions, and friendly tournaments.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1520975869019-62a3b4b86c70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2800,
+    location: "Lucknow",
+    country: "India",
+    reviews: [],
+    geometry: {
+      type: "Point",
+      coordinates: [80.9462, 26.8467],
+    },
+  },
+  {
+    title: "Thane Turf Park",
+    description:
+      "A compact yet premium turf park suitable for small 5-a-side football and cricket practice sessions.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1593764592202-6c7362deec9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
     price: 1200,
-    location: "New Hampshire",
-    country: "United States",
-    reviews: [
-    ],
+    location: "Thane",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [72.9781, 19.2183],
     },
   },
   {
-    title: "Luxury Villa in the Maldives",
+    title: "Kochi International Ground",
     description:
-      "Indulge in luxury in this overwater villa in the Maldives with stunning views of the Indian Ocean.",
+      "Spacious ground in Kerala featuring excellent drainage and lush grass for smooth play all season.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFrZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
-    price: 6000,
-    location: "Maldives",
-    country: "Maldives",
-    reviews: [
-    ],
+    price: 3900,
+    location: "Kochi",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [76.2673, 9.9312],
     },
   },
   {
-    title: "Ski Chalet in Aspen",
+    title: "Nagpur Sports Arena",
     description:
-      "Hit the slopes in style with this luxurious ski chalet in the world-famous Aspen ski resort.",
+      "A well-equipped cricket and football venue in Nagpur, great for tournaments and coaching camps.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGxha2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
-    price: 4000,
-    location: "Aspen",
-    country: "United States",
-    reviews: [
-    ],
+    price: 3100,
+    location: "Nagpur",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [79.0882, 21.1458],
     },
   },
   {
-    title: "Secluded Beach House in Costa Rica",
+    title: "Noida Turf Ground",
     description:
-      "Escape to a secluded beach house on the Pacific coast of Costa Rica. Surf, relax, and unwind.",
+      "Modern turf in Noida designed for small-sided football matches and quick cricket sessions.",
     image: {
       filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2glMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      url: "https://images.unsplash.com/photo-1623282033815-26e3c2ac169b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     },
-    price: 1800,
-    location: "Costa Rica",
-    country: "Costa Rica",
-    reviews: [
-    ],
+    price: 900,
+    location: "Noida",
+    country: "India",
+    reviews: [],
     geometry: {
       type: "Point",
-      coordinates: [-118.68517, 34.034378],
+      coordinates: [77.391, 28.5355],
     },
   },
 ];

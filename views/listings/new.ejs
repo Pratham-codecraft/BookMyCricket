@@ -30,77 +30,79 @@
       </div>
 
       <!-- CHANGE -->
-       <div>
-          <label for="category" class="form-label">Choose Category</label>
-          <div class="category-choose"></div>
-          <div class="row">
-              <div class="col-md-6">
-                  <div class="form-check mb-3">
-                      <input class="form-check-input" type="radio" id="rooms" name="listing[category]" value="Rooms" required>
-                      <label class="form-check-label d-flex align-items-center" for="rooms">
-                          <i class="fa-solid fa-bed me-2"></i> Rooms
-                      </label>
-                  </div>
-                  <div class="form-check mb-3">
-                      <input class="form-check-input" type="radio" id="iconic-cities" name="listing[category]" value="Iconic Cities" required>
-                      <label class="form-check-label d-flex align-items-center" for="iconic-cities">
-                          <i class="fa-solid fa-mountain-city me-2"></i> Iconic Cities
-                      </label>
-                  </div>
-                  <div class="form-check mb-3">
-                      <input class="form-check-input" type="radio" id="mountains" name="listing[category]" value="Mountains" required>
-                      <label class="form-check-label d-flex align-items-center" for="mountains">
-                          <i class="fa-solid fa-mountain me-2"></i> Mountains
-                      </label>
-                  </div>
-                  <div class="form-check mb-3">
-                      <input class="form-check-input" type="radio" id="castles" name="listing[category]" value="Castles" required>
-                      <label class="form-check-label d-flex align-items-center" for="castles">
-                          <i class="fa-brands fa-fort-awesome me-2"></i> Castles
-                      </label>
-                  </div>
-                  <div class="form-check mb-3">
-                      <input class="form-check-input" type="radio" id="amazing-pools" name="listing[category]" value="Amazing Pools" required>
-                      <label class="form-check-label d-flex align-items-center" for="amazing-pools">
-                          <i class="fa-solid fa-person-swimming me-2"></i> Amazing Pools
-                      </label>
-                  </div>
-                  <div class="form-check mb-3">
-                      <input class="form-check-input" type="radio" id="camping" name="listing[category]" value="Camping" required>
-                      <label class="form-check-label d-flex align-items-center" for="camping">
-                          <i class="fa-solid fa-campground me-2"></i> Camping
-                      </label>
-                  </div>
-                  <div class="form-check mb-3">
-                      <input class="form-check-input" type="radio" id="village" name="listing[category]" value="Village" required>
-                      <label class="form-check-label d-flex align-items-center" for="village">
-                          <i class="fa-solid fa-cow me-2"></i> Village
-                      </label>
-                  </div>
-                  <div class="form-check mb-3">
-                      <input class="form-check-input" type="radio" id="igloo" name="listing[category]" value="Igloo" required>
-                      <label class="form-check-label d-flex align-items-center" for="igloo">
-                          <i class="fa-solid fa-igloo me-2"></i> Igloo
-                      </label>
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <div class="form-check mb-3">
-                      <input class="form-check-input" type="radio" id="domes" name="listing[category]" value="Domes" required>
-                      <label class="form-check-label d-flex align-items-center" for="domes">
-                          <i class="fa-solid fa-landmark-dome me-2"></i> Domes
-                      </label>
-                  </div>
-                  <div class="form-check mb-3">
-                      <input class="form-check-input" type="radio" id="house-boats" name="listing[category]" value="House Boats" required>
-                      <label class="form-check-label d-flex align-items-center" for="house-boats">
-                          <i class="fa-solid fa-sailboat me-2"></i> House Boats
-                      </label>
-                  </div>
-              </div>
-          </div>
-          <div class="invalid-feedback">Choose Category</div>
+       <!-- Category Section -->
+<div>
+  <label for="category" class="form-label">Choose Category</label>
+  <div class="category-choose"></div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" id="Local Grounds" name="listing[category]" value="Local Grounds" required>
+        <label class="form-check-label d-flex align-items-center" for="Local Grounds">
+          <i class="fa-solid fa-map-location-dot me-2"></i> Local Grounds
+        </label>
       </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" id="Indoor Arenas" name="listing[category]" value="Indoor Arenas" required>
+        <label class="form-check-label d-flex align-items-center" for="Indoor Arenas">
+          <i class="fa-solid fa-building me-2"></i> Indoor Arenas
+        </label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" id="Coaching grounds" name="listing[category]" value="Coaching grounds" required>
+        <label class="form-check-label d-flex align-items-center" for="Coaching grounds">
+          <i class="fa-solid fa-chalkboard-user me-2"></i> Coaching grounds
+        </label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" id="Amateur Leagues" name="listing[category]" value="Amateur Leagues" required>
+        <label class="form-check-label d-flex align-items-center" for="Amateur Leagues">
+          <i class="fa-solid fa-people-group me-2"></i> Amateur Leagues
+        </label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" id="Tournament grounds" name="listing[category]" value="Tournament grounds" required>
+        <label class="form-check-label d-flex align-items-center" for="Tournament grounds">
+          <i class="fa-solid fa-trophy me-2"></i> Tournament grounds
+        </label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" id="Turf Grounds" name="listing[category]" value="Turf Grounds" required>
+        <label class="form-check-label d-flex align-items-center" for="Turf Grounds">
+          <i class="fa-solid fa-baseball-bat-ball"></i> Turf Grounds
+        </label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" id="Astro Turf" name="listing[category]" value="Astro Turf" required>
+        <label class="form-check-label d-flex align-items-center" for="Astro Turf">
+          <i class="fa-solid fa-campground me-2"></i> Astro Turf
+        </label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" id="Backyard" name="listing[category]" value="Backyard" required>
+        <label class="form-check-label d-flex align-items-center" for="Backyard">
+          <i class="fa-solid fa-house me-2"></i> Backyard
+        </label>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" id="Night Cricket" name="listing[category]" value="Night Cricket" required>
+        <label class="form-check-label d-flex align-items-center" for="Night Cricket">
+          <i class="fa-solid fa-moon me-2"></i> Night Cricket
+        </label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" id="Beach Cricket" name="listing[category]" value="Beach Cricket" required>
+        <label class="form-check-label d-flex align-items-center" for="Beach Cricket">
+          <i class="fa-solid fa-umbrella-beach me-2"></i> Beach Cricket
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="invalid-feedback">Choose Category</div>
+</div>
+
 
       <!-- CHANGE END -->
 

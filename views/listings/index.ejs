@@ -21,10 +21,10 @@
     cursor: pointer;
   }
   .filter p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   .tax-toggle {
-    margin-left: auto;
+    margin-left: 1rem;
     display: flex;
     align-items: center;
     border: 1px solid black;
@@ -62,72 +62,72 @@
       </div>
 
       <div class="filter">
-        <a href="/listings/filter/Rooms" style="text-decoration: none; color: inherit;">
-          <div><i class="fa-solid fa-bed"></i></div>
-          <p>Rooms</p>
+        <a href="/listings/filter/Local Grounds" style="text-decoration: none; color: inherit;">
+          <div><i class="fa-solid fa-map-location-dot"></i></div>
+          <p>Local Grounds</p>
         </a>
       </div>
 
       <div class="filter">
-        <a href="/listings/filter/Iconic Cities" style="text-decoration: none; color: inherit;">
-          <div><i class="fa-solid fa-mountain-city"></i></div>
-          <p>Iconic Cities</p>
+        <a href="/listings/filter/IndoorArenas" style="text-decoration: none; color: inherit;">
+          <div><i class="fa-solid fa-building"></i></div>
+          <p>Indoor Arenas</p>
         </a>
       </div>
 
       <div class="filter">
-        <a href="/listings/filter/Mountains" style="text-decoration: none; color: inherit;">
-          <div><i class="fa-solid fa-mountain"></i></div>
-          <p>Mountains</p>
+        <a href="/listings/filter/Coaching grounds" style="text-decoration: none; color: inherit;">
+          <div><i class="fa-solid fa-chalkboard-user"></i></div>
+          <p>Coaching grounds</p>
         </a>
       </div>
 
       <div class="filter">
-        <a href="/listings/filter/Castles" style="text-decoration: none; color: inherit;">
-          <div><i class="fa-brands fa-fort-awesome"></i></div>
-          <p>Castles</p>
+        <a href="/listings/filter/AmateurLeagues" style="text-decoration: none; color: inherit;">
+          <div><i class="fa-solid fa-people-group"></i></div>
+          <p>Amateur Leagues</p>
         </a>
       </div>
 
       <div class="filter">
-        <a href="/listings/filter/Amazing Pools" style="text-decoration: none; color: inherit;">
-          <div><i class="fa-solid fa-person-swimming"></i></div>
-          <p>Amazing Pools</p>
+        <a href="/listings/filter/Tournament grounds" style="text-decoration: none; color: inherit;">
+          <div><i class="fa-solid fa-trophy"></i></div>
+          <p>Tournament grounds</p>
         </a>
       </div>
 
       <div class="filter">
-        <a href="/listings/filter/Camping" style="text-decoration: none; color: inherit;">
+        <a href="/listings/filter/Turf Grounds" style="text-decoration: none; color: inherit;">
+          <div><i class="fa-solid fa-baseball-bat-ball"></i></div>
+          <p>Turf Grounds</p>
+        </a>
+      </div>
+
+      <div class="filter">
+        <a href="/listings/filter/Astro Turf" style="text-decoration: none; color: inherit;">
           <div><i class="fa-solid fa-campground"></i></div>
-          <p>Camping</p>
+          <p>Astro Turf</p>
         </a>
       </div>
 
       <div class="filter">
-        <a href="/listings/filter/Village" style="text-decoration: none; color: inherit;">
-          <div><i class="fa-solid fa-cow"></i></div>
-          <p>Village</p>
+        <a href="/listings/filter/Backyard" style="text-decoration: none; color: inherit;">
+          <div><i class="fa-solid fa-house"></i></div>
+          <p>Backyard Grounds</p>
         </a>
       </div>
 
       <div class="filter">
-        <a href="/listings/filter/Igloo" style="text-decoration: none; color: inherit;">
-          <div><i class="fa-solid fa-igloo"></i></div>
-          <p>Igloo</p>
+        <a href="/listings/filter/Night Cricket" style="text-decoration: none; color: inherit;">
+          <div><i class="fa-solid fa-moon"></i></div>
+          <p>Night Cricket</p>
         </a>
       </div>
 
       <div class="filter">
-        <a href="/listings/filter/Domes" style="text-decoration: none; color: inherit;">
-          <div><i class="fa-solid fa-landmark-dome"></i></div>
-          <p>Domes</p>
-        </a>
-      </div>
-
-      <div class="filter">
-        <a href="/listings/filter/House Boats" style="text-decoration: none; color: inherit;">
-          <div><i class="fa-solid fa-sailboat"></i></div>
-          <p>House Boats</p>
+        <a href="/listings/filter/Beach Cricket" style="text-decoration: none; color: inherit;">
+          <div><i class="fa-solid fa-umbrella-beach"></i></div>
+          <p>Beach Cricket</p>
         </a>
       </div>
 
@@ -142,6 +142,7 @@
   </div>
 </div>
 
+
 <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
   <% for(let listing of allListings) { %>
   <a href="/listings/<%=listing._id%>" class="listing-link" style="text-decoration: none;">
@@ -151,7 +152,7 @@
       <div class="card-body">
         <p class="card-text">
           <b><%= listing.title %></b> <br/>
-          &#8377; <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %>/night
+          &#8377; <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %>/hour
           <i class="tax-info">&nbsp; &nbsp; +18% GST</i>
         </p>
       </div>
