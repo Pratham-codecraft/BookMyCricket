@@ -56,7 +56,6 @@ All ground photos are stored and delivered through **Cloudinary** for optimized 
 The **BookMyCricket** project is deployed on **Render**, connected with **MongoDB Atlas** for database management.
 
 **Live Application:** [BookMyCricket](https://bookmycricket.onrender.com)  
-*(replace with your actual deployed link)*
 
 ---
 
